@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        
+        sh 'docker rm -f appserver2'
         sh 'docker build -t my-flask .'
         sh 'docker tag my-flask $dockertag'
       }

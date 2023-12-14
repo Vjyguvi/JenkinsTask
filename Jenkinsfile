@@ -30,7 +30,7 @@ pipeline {
 post{
     always {
         script {
-           mail to: 'aws.vjy@gmail.com', subject: 'Subject', body: 'Email body'
+           mail to: 'aws.vjy@gmail.com', subject: 'Jenkins', body: 'Job from jenkins'
         }
     }
 }

@@ -30,7 +30,7 @@ pipeline {
 post{
     always {
         script {
-           emailext ( attachLog: true, body: 'please find the attachment for logs', compressLog: true, postsendScript: 'completed', presendScript: 'Started', subject: 'this is to inform the status', to: 'aws.vjy@gmail.com' )
+           mail to: 'aws.vjy@gmail.com', subject: 'Subject', body: 'Email body'
         }
     }
 }

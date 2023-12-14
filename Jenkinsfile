@@ -30,7 +30,7 @@ pipeline {
 post{
     always {
         script {
-            mail to: 'aws.vjy@gmail.com', subject: 'Jenkins', body: 'Job From Jenkins'
+           emailext attachLog: true, body: 'please find the attachment for logs', compressLog: true, postsendScript: 'completed', presendScript: 'Started', subject: 'this is to inform the status', to: 'aws.vjy@gmail.com'
         }
     }
 }
